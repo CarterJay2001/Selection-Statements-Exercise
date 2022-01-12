@@ -7,22 +7,32 @@ namespace SelectionStatementsExercise
         static void Main(string[] args)
         {
             var r = new Random();
-            var favNumber = r.Next(1, 1000);
+            var favNumber = r.Next(1, 100);
 
-            Console.WriteLine("Try to guess my favorite number");
-            int userinput = int.Parse(Console.ReadLine());
+            Console.WriteLine("Try to guess my favorite number between 1 and 100");
 
-            if (userinput < favNumber)
+            var correct = false;
+            var tries = 1;
+            while (!correct)
             {
-                Console.WriteLine("Too low");
-            }
-            else if (userinput > favNumber)
-            {
-                Console.WriteLine("Too high");
-            }
-            else
-            {
-                Console.WriteLine("You Got It!!!");
+                int userinput = int.Parse(Console.ReadLine());
+
+                if (userinput < favNumber)
+                {
+                    Console.WriteLine("\nToo low. Try Again:");
+                    tries += 1;
+                }
+                else if (userinput > favNumber)
+                {
+                    Console.WriteLine("\nToo high. Try Again:");
+                    tries += 1;
+                }
+                else
+                {
+                    correct = true;
+                    Console.WriteLine($"\nYou got it in {tries} tries!!!");
+                }
+
             }
 
             Console.WriteLine("\nWhat is your favorite school subject?");
