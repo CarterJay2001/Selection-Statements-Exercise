@@ -6,10 +6,11 @@ namespace SelectionStatementsExercise
     {
         static void Main(string[] args)
         {
-            var favNumber = 652;
+            var r = new Random();
+            var favNumber = r.Next(1, 1000);
 
             Console.WriteLine("Try to guess my favorite number");
-            var userinput = int.Parse(Console.ReadLine());
+            int userinput = int.Parse(Console.ReadLine());
 
             if (userinput < favNumber)
             {
