@@ -29,37 +29,37 @@ namespace SelectionStatementsExercise
                 Console.WriteLine("Nevermind");
             }
 
-            Console.WriteLine("\nWhat is your favorite school subject? (in pascal case)");
+            Console.WriteLine("\nWhat is your favorite school subject?");
 
             string favSubject = Console.ReadLine();
 
-            switch (favSubject)
+            switch (favSubject.ToLower())
             {
-                case "Science":
+                case "science":
                     Console.WriteLine("\nI love Science. Have you ever made an accidental " +
                         $"explosion?");
                     break;
 
-                case "Math":
+                case "math":
                     Console.WriteLine("\nI heard you like math, so what's the sum of U + Me?");
                     break;
 
-                case "History":
+                case "history":
                     Console.WriteLine("\nLike US History or World history? In my opinion one is WAYYY better than the other.");
                     break;
 
-                case "English":
+                case "english":
                     Console.WriteLine("\nNever understood the point, like, don't we already speak it?");
                     break;
 
-                case "Physical Education":
-                case "PE":
-                case "P.E.":
+                case "physical education":
+                case "pe":
+                case "p.e.":
                     Console.WriteLine("\nWell that's just everyone's favorite. I always wanted to play dodgeball, " +
                         "but alas I am only a computer :(");
                     break;
 
-                case "Lunch":
+                case "lunch":
                     Console.WriteLine("\nNow we both know that doesn't count.");
                     break;
 
