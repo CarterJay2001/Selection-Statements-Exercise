@@ -20,12 +20,12 @@ namespace SelectionStatementsExercise
                 if (userinput < favNumber)
                 {
                     Console.WriteLine("\nToo low. Try Again:");
-                    tries += 1;
+                    tries++;
                 }
                 else if (userinput > favNumber)
                 {
                     Console.WriteLine("\nToo high. Try Again:");
-                    tries += 1;
+                    tries++;
                 }
                 else
                 {
